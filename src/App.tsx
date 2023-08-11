@@ -4,8 +4,9 @@ import { Route, Routes } from 'react-router-dom';
 import Page1 from "./component/user/User";
 import Page2 from "./component/list/list";
 import Page3 from "./component/object/userObject";
-import Page4 from "./component/task/task1/planetData"
-import Page5 from "./component/task/task2/Counter"
+import Page4 from "./component/task/task1/planetData";
+import Page5 from "./component/task/task2/Counter";
+import Page6 from "./component/todoList/TodoList";
 
 function App() {
   return (
@@ -16,6 +17,7 @@ function App() {
         <Route path='/page3' element={<Page3 />} />
         <Route path='/page4' element={<Page4 />} />
         <Route path='/page5' element={<Page5 />} />
+        <Route path='/page6' element={<Page6 />} />
       </Routes>
     </div>
   );

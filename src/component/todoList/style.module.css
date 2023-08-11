@@ -1,0 +1,27 @@
+.App{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.title{
+    color: brown;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+input{
+    padding: 1rem;
+    border-radius: 0.2rem;
+    width: 20rem;
+    margin-right: 0.5rem;
+}
+
+button{
+    padding: 1rem;
+    cursor: pointer;
+    background: rgb(0, 115, 255);
+    color: #fff;
+    border-radius: 0.2rem;
+    border: none;
+}
