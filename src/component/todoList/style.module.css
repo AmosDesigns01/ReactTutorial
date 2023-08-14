@@ -1,8 +1,6 @@
 .App{
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
+    margin: 2rem auto;
+    width: 50%;
 }
 
 .title{
@@ -21,6 +19,25 @@ button{
     padding: 1rem;
     cursor: pointer;
     background: rgb(0, 115, 255);
+    color: #fff;
+    border-radius: 0.2rem;
+    border: none;
+}
+
+.task{
+    width: 440px;
+    margin-top: 1rem;
+    border-bottom: 2px solid grey;
+    padding: 1rem 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.Delete{
+    padding: 1rem;
+    cursor: pointer;
+    background: rgb(165, 6, 6);
     color: #fff;
     border-radius: 0.2rem;
     border: none;
