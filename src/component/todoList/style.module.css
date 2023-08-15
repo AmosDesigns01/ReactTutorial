@@ -42,3 +42,35 @@ button{
     border-radius: 0.2rem;
     border: none;
 }
+
+.tick{
+    cursor: pointer;
+    width: 25px;
+    padding: 0.3rem;
+    cursor: pointer;
+    background: rgb(36, 114, 8);
+    color: #fff;
+    border-radius: 0.2rem;
+    border: none;
+}
+
+.untick{
+    cursor: pointer;
+    width: 25px;
+    padding: 0.3rem;
+    cursor: pointer;
+    background: rgb(111, 111, 111);
+    color: #fff;
+    border-radius: 0.2rem;
+    border: none;
+}
+
+.complete{
+    text-decoration: line-through;
+    color: rgb(174, 174, 174);
+}
+
+.taskName{
+    color: #000;
+    text-decoration: none;
+}

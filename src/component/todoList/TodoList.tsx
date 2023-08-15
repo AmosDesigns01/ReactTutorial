@@ -1,3 +1,4 @@
+import { click } from "@testing-library/user-event/dist/click";
 import style from "./style.module.css";
 import React, { useState } from 'react'
 
@@ -5,11 +6,14 @@ const TodoList = () => {
     // screating an interface for my task.
     interface TodoList{
         id: number,
-        taskName: string
+        taskName: string,
+        completed: boolean
     }
 
     const [todoList, setTodoList] = useState<TodoList[]>([]);
     const [input, setInput] = useState("");
+
+    const taskChecked: boolean = false;
     
 
     // this function get the value of the input.
@@ -24,6 +28,7 @@ const TodoList = () => {
         const newTask: TodoList = {
             id: Date.now(), // Example of generating a unique ID
             taskName: input,
+            completed: taskChecked
         }
         setTodoList([...todoList, newTask]);
     }
@@ -35,6 +40,15 @@ const TodoList = () => {
         });
 
         setTodoList(newTodoList);
+    }
+
+    // This function is use to complete our task
+    const taskCompleted = (taskId: number) => {
+        setTodoList(prevTasks =>
+            prevTasks.map(task =>
+              task.id === taskId ? { ...task, completed: !task.completed } : task
+            )
+          );
     }
 
 
@@ -53,7 +67,10 @@ const TodoList = () => {
                 todoList?.map((task) => {
                     return(
                         <div className={style.task} key={task.id}>
-                            <p>{task.taskName}</p>
+                            <button className={task.completed ? style.tick : style.untick} onClick={() => taskCompleted(task.id)}>&#10003;</button>
+                                
+
+                            <p className={task.completed ? style.complete : style.taskName}>{task.taskName}</p>
                             <button className={style.Delete} onClick={() => taskDelete(task.id)}>Delete</button>
                         </div>
                     )
