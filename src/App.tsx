@@ -7,6 +7,7 @@ import Page3 from "./component/object/userObject";
 import Page4 from "./component/task/task1/planetData";
 import Page5 from "./component/task/task2/Counter";
 import Page6 from "./component/todoList/TodoList";
+import Page7 from "./component/mapData/mainPage";
 
 function App() {
   return (
@@ -18,6 +19,7 @@ function App() {
         <Route path='/page4' element={<Page4 />} />
         <Route path='/page5' element={<Page5 />} />
         <Route path='/page6' element={<Page6 />} />
+        <Route path='/page7' element={<Page7 />} />
       </Routes>
     </div>
   );
